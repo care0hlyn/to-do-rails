@@ -2,6 +2,8 @@ class TasksController < ApplicationController
   def index
     @tasks = Task.all
     @task = Task.new
+    @done_tasks = Task.done
+    @not_done_tasks = Task.not_done
     render('tasks/index.html.erb')
   end
 
