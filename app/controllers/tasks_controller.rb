@@ -21,7 +21,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(:description => params[:description])
+    @task = Task.new(params[:task])
 
     if @task.save
       render('tasks/success.html.erb')
@@ -32,7 +32,7 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    if @task.update(:description => params[:description])
+    if @task.update(params[:task])
       render('tasks/success.html.erb')
     else
       render('tasks/edit.html.erb')
