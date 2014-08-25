@@ -1,0 +1,12 @@
+<h1><%= @task.description %></h1>
+
+<p>Created at: <%= @task.created_at %></p>
+<p>Updated at: <%= @task.updated_at %></p>
+
+<p><a href="/tasks/<%= @task.id %>/edit">Edit</a></p>
+<p><a href="/tasks/<%= @task.id %>"
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
+
+<p><a href="/tasks/">Return to tasks</a></p>
